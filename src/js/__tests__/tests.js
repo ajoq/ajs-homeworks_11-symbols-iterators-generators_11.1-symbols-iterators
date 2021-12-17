@@ -36,6 +36,6 @@ test('Person', () => {
 
 test('Team', () => {
   const expected = { players: [new Person(char1), new Person(char2), new Person(char3)] };
-  const received = new Team(char1, char2, char3);
+  const received = new Team(new Person(char1), new Person(char2), new Person(char3));
   expect(received).toEqual(expected);
 });
